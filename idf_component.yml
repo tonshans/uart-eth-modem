@@ -1,7 +1,11 @@
 dependencies:
   idf: '>=6.0.1'
   espressif/iot_eth: ^1.1.0
-  78/uart-uhci: ^0.4.0
+  78/uart-uhci:
+    git: https://github.com/tonshans/uart-uhci.git
+    version: 08c32c6
+    rules:
+      - if: target not in [esp32]
 files:
   exclude:
   - .git
